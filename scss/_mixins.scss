@@ -1,0 +1,19 @@
+@mixin goFlex($dir: row, $justify: flex-start, $wrap: wrap) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+@mixin roboto($weight: 400, $color: black) {
+    font-family: "Roboto", sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+    color: $color;
+}
+
+@mixin impBgImg($url: url, $position: center, $repeat: no-repeat) {
+    background-image: url($url);
+    background-position: $position;
+}
+

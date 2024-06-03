@@ -1,0 +1,51 @@
+body {
+    .index-header {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(79, 187, 253);
+
+        .index-header-container {
+            @extend %my-container;
+            // background-color: rgb(212, 210, 208);
+            height: 100px;
+
+            @include goFlex(row, space-between);
+            align-items: center;
+
+            .index-header-leftside {
+                @include goFlex(row, space-around);
+                align-items: center;
+                width: 600px;
+                height: 100px;
+                
+
+                img {
+                    width: 70px;  
+                }
+
+                nav {
+                    a {
+                        @include roboto(600, rgb(251, 251, 251));
+                        margin-left: 30px;
+
+                    }
+                }
+            }
+
+            .index-header-rightside {
+                @include goFlex(row, space-evenly);
+                @include roboto(600, rgb(251, 251, 251));
+                align-items: center;
+                width: 500px;
+                height: 100px;
+
+                .log-in {
+                    width: 100px;
+                    height: 50px;
+                }
+
+            }
+            
+        }
+    }
+}
