@@ -1,0 +1,170 @@
+.mentors-mentors {
+    .mentors-listofprograms-container {
+        @extend %my-container;
+        margin-bottom: 30px;
+        margin-top: 70px;
+
+        h1 {
+            @include roboto($primary-header-weight, white);
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 80px;
+        }
+
+        .actual-mentors {
+            @include goFlex(row, space-evenly);
+            @extend %my-container;
+
+            .div-pass {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 400px;
+                margin-bottom: 50px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 400px;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin-bottom: 0px;
+
+                    img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 300px;
+                        border-radius: 10px;
+                        font-size: 200px;
+                        transition: transform 0.2s ease-in-out;
+                        color: white;
+                        margin-bottom: 5px;
+                        margin-bottom: 10px
+                    }
+
+
+
+                    .text-div {
+                        background-color: rgb(14, 85, 139);
+
+                        h2 {
+                            @include roboto(700, white);
+                            text-align: center;
+                            margin-bottom: 20px;
+                            margin-top: 5px;
+                            font-size: 25px;
+                            
+                        }
+
+                        p {
+                            text-align: center;
+                            width: 250px;
+                            margin-bottom: 25px;
+                            @include roboto(400, white);
+                            line-height: 18px;
+                            
+                        }
+    
+                        a {
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 5px;
+                            background-color: rgb(24, 101, 159);
+                            color: white;
+                            width: 250px;
+                            height: 45px;
+                            font-size: 18px;
+                            transition: transform 0.2s ease-in-out;
+                        }
+                    }
+
+                    
+
+
+                    a:hover {
+                        transform: scale(1.05);
+                        transform-origin: 50% 50%;
+                    }
+                }
+
+                
+            }
+        }
+
+
+    }
+
+}
+
+.mentors-contact {
+    margin-bottom: 70px;
+
+    .mentors-contact-container {
+        @extend %my-container;
+        background-color: rgb(30, 90, 117);
+        border-radius: 10px;
+        padding: 40px;
+
+        h1 {
+            @include roboto(700, white);
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px
+        }
+
+        .forms-div {
+            @include goFlex(row, center);
+
+            
+
+            .left-side {
+                display: flex;
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 20px;
+
+                    label {
+                        color: white;
+                    }
+
+                    input[type=text], select {
+                        width: 100%;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                      }
+                }
+            }
+
+            .right-side {
+                margin-top: 15px;
+
+                input[type=submit] {
+                    width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                  }
+            }
+
+
+        }
+        
+
+        
+
+    }
+}

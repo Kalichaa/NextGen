@@ -61,19 +61,27 @@ a {
   box-sizing: border-box;
 }
 
-body .index-mentors .index-mentors-container, body .index-questions .index-questions-container, body .index-programs .index-programs-container, body .index-header .index-header-container {
+.mentors-contact .mentors-contact-container, .mentors-mentors .mentors-listofprograms-container .actual-mentors, .mentors-mentors .mentors-listofprograms-container, .css-main .css-main-container, body .programs-footer .programs-footer-container, body .programs-questions .programs-questions-container, body .programs-listofprograms .programs-listofprograms-container .actual-programs, body .programs-listofprograms .programs-listofprograms-container, body .programs-intro .programs-intro-bg .programs-intro-container, body .index-footer .index-footer-container, body .index-whynextgen .index-whynextgen-container, body .index-mentors .index-mentors-container, body .index-programs .index-programs-container, body .index-header .index-header-container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: nino-mtavruli;
+  src: url(../fonts/bpg_nino_mtavruli_normal.ttf);
+}
+body {
+  background-color: rgb(42, 82, 101);
+}
 body .index-header {
   position: sticky;
   top: 0;
   width: 100%;
   height: 65px;
-  background-color: rgb(45, 157, 226);
-  border-bottom: 1px solid rgb(120, 119, 119);
+  background-color: rgb(50, 73, 84);
+  border-bottom: 1px solid rgb(69, 69, 69);
+  z-index: 2;
 }
 body .index-header .index-header-container {
   height: 65px;
@@ -83,25 +91,42 @@ body .index-header .index-header-container {
   flex-wrap: wrap;
   align-items: center;
 }
+@media (max-width: 1100px) {
+  body .index-header .index-header-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 200px) {
+  body .index-header .index-header-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
 body .index-header .index-header-container .index-header-leftside {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  width: 600px;
-  height: 65px;
 }
 body .index-header .index-header-container .index-header-leftside img {
   width: 45.5px;
+  margin-right: 20px;
 }
 body .index-header .index-header-container .index-header-leftside nav a {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: rgb(251, 251, 251);
+  color: white;
   font-size: 15px;
   margin-left: 30px;
+  color: rgb(226, 227, 227);
+}
+@media (max-width: 1100px) {
+  body .index-header .index-header-container .index-header-leftside nav {
+    display: none;
+  }
 }
 body .index-header .index-header-container .index-header-rightside {
   display: flex;
@@ -111,60 +136,85 @@ body .index-header .index-header-container .index-header-rightside {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: rgb(251, 251, 251);
+  color: white;
+  align-items: center;
+}
+body .index-header .index-header-container .index-header-rightside i {
+  display: none;
+  font-size: 25px;
+}
+@media (max-width: 1100px) {
+  body .index-header .index-header-container .index-header-rightside i {
+    display: inline-block;
+  }
+}
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
   align-items: center;
   width: 450px;
-  height: 65px;
 }
-body .index-header .index-header-container .index-header-rightside h1 {
+@media (max-width: 1100px) {
+  body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav {
+    display: none;
+  }
+}
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav h1 {
   font-size: 15px;
+  color: white;
 }
-body .index-header .index-header-container .index-header-rightside .header-portal {
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-portal {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 250px;
 }
-body .index-header .index-header-container .index-header-rightside .header-log-in {
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-log-in {
   width: 85px;
   height: 40px;
-  background-color: #23c8a2;
+  background-color: rgb(28, 81, 106);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: background-color 0.5s;
 }
-body .index-header .index-header-container .index-header-rightside .header-log-in a {
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-log-in a {
   color: white;
   font-size: 15px;
 }
-body .index-header .index-header-container .index-header-rightside .header-register {
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-register {
   width: 120px;
   height: 40px;
-  background-color: #23c8a2;
+  background-color: rgb(28, 81, 106);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: background-color 0.5s;
 }
-body .index-header .index-header-container .index-header-rightside .header-register a {
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-register a {
   color: white;
   font-size: 15px;
 }
-body .index-header .index-header-container .index-header-rightside .header-log-in:hover {
-  background-color: #1fad8c;
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-log-in:hover {
+  background-color: #1e4459;
 }
-body .index-header .index-header-container .index-header-rightside .header-register:hover {
-  background-color: #1fad8c;
+body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-register:hover {
+  background-color: #1e4459;
 }
 body .index-welcome {
   margin-bottom: 40px;
 }
 body .index-welcome .index-welcome-bg {
-  background-image: url("../images/Main Page/slogan3.avif");
+  background-image: url("../images/slogan-new1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -193,15 +243,20 @@ body .index-welcome .index-welcome-bg div a {
   align-items: center;
   justify-content: center;
   font-size: 30px;
-  background-color: rgb(233, 76, 126);
+  background-color: #357293;
   height: 60px;
   width: 400px;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 5px;
   transition: background-color 1s, transform 0.5s ease-in-out;
 }
+@media (max-width: 400px) {
+  body .index-welcome .index-welcome-bg div a {
+    width: 100%;
+  }
+}
 body .index-welcome .index-welcome-bg div a:hover {
-  background-color: rgb(253, 25, 97);
+  background-color: #398cb8;
   transform: scale(1.1);
   transform-origin: 50% 50%;
 }
@@ -214,6 +269,7 @@ body .index-programs .index-programs-container h1 {
   font-weight: 600;
   font-style: normal;
   color: black;
+  color: white;
   font-size: 50px;
   margin-bottom: 60px;
 }
@@ -222,104 +278,65 @@ body .index-programs .index-programs-container .index-programs-programcontainer 
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 body .index-programs .index-programs-container .index-programs-programcontainer div {
-  width: 400px;
-  border-radius: 15px;
-  padding: 20px;
+  width: 200px;
 }
-body .index-programs .index-programs-container .index-programs-programcontainer div h2 {
+body .index-programs .index-programs-container .index-programs-programcontainer div i {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  color: black;
-  font-size: 30px;
-  color: white;
-  margin-bottom: 40px;
-  background-color: #61b7ec;
-  height: 50px;
-  border-radius: 7px;
-}
-body .index-programs .index-programs-container .index-programs-programcontainer div img {
-  width: 350px;
-  border-radius: 20px;
+  align-items: center;
+  background-color: rgb(36, 100, 130);
+  width: 200px;
+  border-radius: 10px;
+  font-size: 200px;
   transition: transform 0.2s ease-in-out;
+  color: white;
 }
-body .index-programs .index-programs-container .index-programs-programcontainer div img:hover {
-  transform: scale(1.1);
+body .index-programs .index-programs-container .index-programs-programcontainer div i:hover {
+  transform: scale(1.05);
   transform-origin: 50% 50%;
 }
-body .index-questions {
-  margin-bottom: 40px;
+@media (max-width: 1150px) {
+  body .index-programs .index-programs-container .index-programs-programcontainer div {
+    margin-bottom: 50px;
+  }
 }
-body .index-questions .index-questions-container {
+body .index-programs .index-programs-container .index-programs-seemore {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  height: 270px;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  border-radius: 20px;
-  padding: 30px;
-}
-body .index-questions .index-questions-container .index-questions-text {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
-body .index-questions .index-questions-container .index-questions-text h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  color: white;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-body .index-questions .index-questions-container .index-questions-text h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+body .index-programs .index-programs-container .index-programs-seemore a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 100, 130);
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
   color: white;
   font-size: 20px;
-  margin-bottom: 50px;
-}
-body .index-questions .index-questions-container .index-questions-text a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 30px;
-  margin-right: 20px;
-  background-color: #80D0C7;
-  height: 50px;
-  width: 400px;
-  border-radius: 10px;
-  margin-left: 40px;
   transition: transform 0.3s ease-in-out;
 }
-body .index-questions .index-questions-container .index-questions-text a:hover {
-  transform: scale(1.01);
+body .index-programs .index-programs-container .index-programs-seemore a i {
+  margin-left: 10px;
+}
+body .index-programs .index-programs-container .index-programs-seemore a:hover {
+  transform: scale(1.03);
   transform-origin: 50% 50%;
-  background-color: #80d0b9;
-}
-body .index-questions .index-questions-container .index-questions-image {
-  width: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .index-questions .index-questions-container .index-questions-image img {
-  width: 230px;
+  background-color: rgb(40, 142, 189);
 }
 body .index-mentors .index-mentors-container {
   padding: 50px;
+}
+@media (max-width: 450px) {
+  body .index-mentors .index-mentors-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 body .index-mentors .index-mentors-container h1 {
   font-family: "Roboto", sans-serif;
@@ -329,6 +346,7 @@ body .index-mentors .index-mentors-container h1 {
   font-size: 50px;
   margin-bottom: 60px;
   text-align: center;
+  color: white;
 }
 body .index-mentors .index-mentors-container .index-mentor-mentorcontainer {
   display: flex;
@@ -342,7 +360,7 @@ body .index-mentors .index-mentors-container .index-mentor-mentorcontainer div {
   justify-content: center;
   align-items: center;
   width: 400px;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 20px;
 }
 body .index-mentors .index-mentors-container .index-mentor-mentorcontainer div img {
@@ -353,17 +371,42 @@ body .index-mentors .index-mentors-container .index-mentor-mentorinfo {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
-body .index-mentors .index-mentors-container .index-mentor-mentorinfo div {
-  text-align: center;
+body .index-mentors .index-mentors-container .index-mentor-mentorinfo img {
+  width: 350px;
+  margin-bottom: 20px;
+}
+@media (max-width: 450px) {
+  body .index-mentors .index-mentors-container .index-mentor-mentorinfo img {
+    width: 100%;
+  }
+}
+body .index-mentors .index-mentors-container .index-mentor-mentorinfo .index-mentors-balancer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 350px;
   border-radius: 7px;
   padding: 20px;
-  background-color: #8EC5FC;
-  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
-body .index-mentors .index-mentors-container .index-mentor-mentorinfo div h3 {
+@media (max-width: 450px) {
+  body .index-mentors .index-mentors-container .index-mentor-mentorinfo .index-mentors-balancer {
+    width: 100%;
+  }
+}
+body .index-mentors .index-mentors-container .index-mentor-mentorinfo .index-mentors-balancer .index-mentors-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 100, 130);
+  height: 150px;
+  width: 350px;
+  text-align: center;
+  border-radius: 7px;
+}
+body .index-mentors .index-mentors-container .index-mentor-mentorinfo .index-mentors-balancer .index-mentors-text h3 {
   margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -371,32 +414,836 @@ body .index-mentors .index-mentors-container .index-mentor-mentorinfo div h3 {
   color: white;
   font-size: 20px;
 }
-body .index-mentors .index-mentors-container .index-mentor-mentorinfo div p {
+body .index-mentors .index-mentors-container .index-mentor-mentorinfo .index-mentors-balancer .index-mentors-text p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: rgb(69, 69, 69);
+  color: white;
 }
 body .index-mentors .index-mentors-container .index-mentor-more {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .index-mentors .index-mentors-container .index-mentor-more .index-mentor-more-button {
+body .index-mentors .index-mentors-container .index-mentor-more a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #74EBD5;
-  background-image: linear-gradient(90deg, #9FACE6 0%, #24e5ff 100%);
+  background-color: rgb(36, 100, 130);
   width: 200px;
   height: 50px;
   border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out;
 }
-body .index-mentors .index-mentors-container .index-mentor-more .index-mentor-more-button a {
+body .index-mentors .index-mentors-container .index-mentor-more a i {
+  margin-left: 10px;
+}
+body .index-mentors .index-mentors-container .index-mentor-more a:hover {
+  transform: scale(1.05);
+  transform-origin: 50% 50%;
+  background-color: rgb(40, 142, 189);
+}
+body .index-whynextgen {
+  background-color: rgb(245, 245, 245);
+  padding: 50px;
+  margin-bottom: 50px;
+}
+@media (max-width: 420px) {
+  body .index-whynextgen {
+    padding-left: 0px;
+    padding-right: 0;
+  }
+}
+body .index-whynextgen .index-whynextgen-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(33, 33, 33);
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-desc h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(81, 81, 81);
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  margin-bottom: 35px;
+}
+body .index-whynextgen .index-whynextgen-container hr {
+  margin-bottom: 50px;
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  align-items: center;
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .left-side {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .left-side {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .left-side div {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 280px;
+  height: 280px;
+  background-color: rgb(221, 221, 221);
+  border-radius: 5px;
+  padding: 20px;
+}
+@media (max-width: 420px) {
+  body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .left-side div {
+    width: 100%;
+  }
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .left-side div h3 {
+  font-size: 25px;
+  margin-bottom: 40px;
+  color: #222f36;
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .left-side div i {
+  font-size: 90px;
+  color: #222f36;
+}
+body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .right-side img {
+  width: 600px;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  body .index-whynextgen .index-whynextgen-container .index-whynextgen-stats .right-side img {
+    width: 100%;
+  }
+}
+body .index-partners h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: black;
+  font-size: 50px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+}
+body .index-logo {
+  padding: 70px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+body .index-logo .logo-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+body .index-logo .logo-slide img {
+  height: 80px;
+  margin: 0 40px;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+body .index-footer {
+  background-color: rgb(245, 245, 245);
+}
+body .index-footer .index-footer-container {
+  padding: 20px;
+}
+body .index-footer .index-footer-container .index-footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+}
+@media (max-width: 400px) {
+  body .index-footer .index-footer-container .index-footer-box {
+    flex-direction: column;
+  }
+}
+body .index-footer .index-footer-container .index-footer-box div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .index-footer .index-footer-container .index-footer-box div h1 {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+body .index-footer .index-footer-container .index-footer-box div a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  margin-bottom: 5px;
+}
+body .index-footer .index-footer-container .index-footer-social-media a {
+  font-size: 30px;
+  margin-right: 20px;
+  color: #000000;
+}
+
+body .programs-intro .programs-intro-bg {
+  background-color: rgb(30, 90, 117);
+  border-radius: 50px;
+  margin-bottom: 50px;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+  margin-top: 61px;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .left-side h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .left-side p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  color: rgb(234, 234, 234);
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 25px;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .left-side a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 68, 255);
+  width: 220px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .left-side a:hover {
+  transform: scale(1.05);
+  transform-origin: 50% 50%;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .right-side {
+  width: 800px;
+}
+body .programs-intro .programs-intro-bg .programs-intro-container .right-side img {
+  width: 700px;
+  border-radius: 10px;
+}
+body .programs-sayings {
+  padding: 30px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 60px;
+}
+body .programs-sayings .slide {
+  display: inline-block;
+  animation: 120s slide infinite linear;
+}
+body .programs-sayings .slide h1 {
+  display: inline-block;
+  height: 80px;
+  margin: 0 40px;
+  font-weight: 800;
+  color: rgb(84, 97, 121);
+  font-size: 30px;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+body .programs-listofprograms .programs-listofprograms-container {
+  margin-bottom: 30px;
+}
+body .programs-listofprograms .programs-listofprograms-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 80px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  margin-bottom: 50px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  background-color: rgb(36, 100, 130);
+  border-radius: 10px;
+  padding: 20px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass div i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 200px;
+  transition: transform 0.2s ease-in-out;
+  color: white;
+  margin-bottom: 5px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass div h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass div p {
+  text-align: center;
+  width: 250px;
+  color: white;
+  margin-bottom: 20px;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(51, 51, 255);
+  color: white;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+body .programs-listofprograms .programs-listofprograms-container .actual-programs .div-pass div a:hover {
+  transform: scale(1.05);
+  transform-origin: 50% 50%;
+}
+body .programs-questions {
+  margin-bottom: 70px;
+}
+body .programs-questions .programs-questions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: rgb(30, 90, 117);
+  border-radius: 10px;
+  padding: 30px;
+}
+body .programs-questions .programs-questions-container .programs-questions-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 690px) {
+  body .programs-questions .programs-questions-container .programs-questions-text {
+    text-align: center;
+    width: 100%;
+  }
+}
+body .programs-questions .programs-questions-container .programs-questions-text h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+body .programs-questions .programs-questions-container .programs-questions-text h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+body .programs-questions .programs-questions-container .programs-questions-text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 30px;
+  margin-right: 20px;
+  background-color: #214e66;
+  height: 50px;
+  width: 400px;
+  border-radius: 10px;
+  margin-left: 40px;
+  transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 690px) {
+  body .programs-questions .programs-questions-container .programs-questions-text a {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 425px) {
+  body .programs-questions .programs-questions-container .programs-questions-text a {
+    height: 70px;
+  }
+}
+body .programs-questions .programs-questions-container .programs-questions-text a:hover {
+  background-color: #1e4459;
+}
+body .programs-questions .programs-questions-container .programs-questions-image {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .programs-questions .programs-questions-container .programs-questions-image i {
+  font-size: 180px;
+}
+@media (max-width: 960px) {
+  body .programs-questions .programs-questions-container .programs-questions-image {
+    display: none;
+  }
+}
+body .programs-footer {
+  background-color: rgb(26, 78, 103);
+}
+body .programs-footer .programs-footer-container {
+  padding: 20px;
+}
+body .programs-footer .programs-footer-container .programs-footer-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+}
+@media (max-width: 400px) {
+  body .programs-footer .programs-footer-container .programs-footer-box {
+    flex-direction: column;
+  }
+}
+body .programs-footer .programs-footer-container .programs-footer-box div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .programs-footer .programs-footer-container .programs-footer-box div h1 {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+body .programs-footer .programs-footer-container .programs-footer-box div a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-bottom: 5px;
+}
+body .programs-footer .programs-footer-container .programs-footer-social-media a {
+  font-size: 30px;
+  margin-right: 20px;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.css-main .css-main-container {
+  margin-top: 120px;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.css-main .css-main-container .left-side {
+  width: 900px;
+  padding: 0px 50px 50px 50px;
+}
+.css-main .css-main-container .left-side .left-side-intro h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.css-main .css-main-container .left-side .left-side-intro h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 25px;
+}
+.css-main .css-main-container .left-side .left-side-intro .left-side-mentor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 500px;
+  margin-top: 30px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.css-main .css-main-container .left-side .left-side-intro .left-side-mentor img {
+  width: 200px;
+}
+.css-main .css-main-container .left-side .left-side-intro .left-side-mentor .text h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.css-main .css-main-container .left-side .left-side-intro .left-side-mentor .text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   color: white;
   font-size: 20px;
 }
-body .index-mentors .index-mentors-container .index-mentor-more .index-mentor-more-button :nth-child(1) {
-  margin-right: 15px;
-  margin-left: 10px;
+.css-main .css-main-container .left-side .left-side-learn h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.css-main .css-main-container .left-side .left-side-learn h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.css-main .css-main-container .left-side .left-side-learn p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(212, 212, 212);
+  font-size: 18px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+}
+.css-main .css-main-container .left-side .left-side-roadmap h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.css-main .css-main-container .left-side .left-side-roadmap h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.css-main .css-main-container .left-side .left-side-roadmap p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(212, 212, 212);
+  font-size: 18px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+}
+.css-main .css-main-container .right-side {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.css-main .css-main-container .right-side div {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(36, 100, 130);
+  border-radius: 10px;
+  padding: 20px;
+}
+.css-main .css-main-container .right-side div i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 250px;
+  transition: transform 0.2s ease-in-out;
+  color: white;
+  margin-bottom: 20px;
+}
+.css-main .css-main-container .right-side div h1 {
+  font-size: 20px;
+  color: rgb(235, 235, 235);
+  margin-bottom: 15px;
+}
+.css-main .css-main-container .right-side div h1 i {
+  font-size: 20px;
+  display: inline;
+}
+.css-main .css-main-container .right-side div h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.css-main .css-main-container .right-side div p {
+  text-align: center;
+  width: 250px;
+  color: white;
+}
+.css-main .css-main-container .right-side div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(51, 51, 255);
+  color: white;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+.css-main .css-main-container .right-side div a:hover {
+  transform: scale(1.05);
+  transform-origin: 50% 50%;
+}
+
+.mentors-mentors .mentors-listofprograms-container {
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.mentors-mentors .mentors-listofprograms-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 80px;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-bottom: 50px;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 0px;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 200px;
+  transition: transform 0.2s ease-in-out;
+  color: white;
+  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div .text-div {
+  background-color: rgb(14, 85, 139);
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div .text-div h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 25px;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div .text-div p {
+  text-align: center;
+  width: 250px;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 18px;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div .text-div a {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgb(24, 101, 159);
+  color: white;
+  width: 250px;
+  height: 45px;
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+.mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div a:hover {
+  transform: scale(1.05);
+  transform-origin: 50% 50%;
+}
+
+.mentors-contact {
+  margin-bottom: 70px;
+}
+.mentors-contact .mentors-contact-container {
+  background-color: rgb(30, 90, 117);
+  border-radius: 10px;
+  padding: 40px;
+}
+.mentors-contact .mentors-contact-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.mentors-contact .mentors-contact-container .forms-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mentors-contact .mentors-contact-container .forms-div .left-side {
+  display: flex;
+}
+.mentors-contact .mentors-contact-container .forms-div .left-side .text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.mentors-contact .mentors-contact-container .forms-div .left-side .text label {
+  color: white;
+}
+.mentors-contact .mentors-contact-container .forms-div .left-side .text input[type=text], .mentors-contact .mentors-contact-container .forms-div .left-side .text select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.mentors-contact .mentors-contact-container .forms-div .right-side {
+  margin-top: 15px;
+}
+.mentors-contact .mentors-contact-container .forms-div .right-side input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

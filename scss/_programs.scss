@@ -1,0 +1,331 @@
+body {
+    .programs-intro {
+
+        .programs-intro-bg {
+            background-color: rgb(30, 90, 117);
+            border-radius: 50px;
+            margin-bottom: 50px;
+
+
+            .programs-intro-container {
+                @extend %my-container;
+                @include goFlex(row, space-between);
+                align-items: center;
+                padding: 30px;
+                margin-top: 61px;
+    
+    
+                .left-side {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    width: 400px;
+    
+                    h1 {
+                        @include roboto(600, white);
+                        font-size: 40px;
+                        margin-bottom: 40px
+                    }
+    
+                    p {
+                        @include roboto();
+                        color: rgb(234, 234, 234);
+                        font-size: 20px;
+                        margin-bottom: 40px;
+                        line-height: 25px;
+                    }
+
+                    a {
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgb(0, 68, 255);
+                        width: 220px;
+                        height: 50px;
+                        border-radius: 5px;
+                        font-size: 20px;
+                        transition: transform 0.3s ease-in-out;
+                    }
+
+                    a:hover {
+                        transform: scale(1.05);
+                        transform-origin: 50% 50%;
+                    }
+                }
+    
+                .right-side {
+                    width: 800px;
+    
+                    img {
+                        width: 700px;
+                        border-radius: 10px;
+                    }
+                }
+    
+    
+            }
+        }
+
+    }
+
+    .programs-sayings {
+        padding: 30px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 60px;
+
+        .slide {
+            display: inline-block;
+            animation: 120s slide infinite linear;
+
+            h1 {
+                display: inline-block;
+                height: 80px;
+                margin: 0 40px;
+                font-weight: 800;
+                color: rgb(84, 97, 121);
+                font-size: 30px;
+            }
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    .programs-listofprograms {
+        .programs-listofprograms-container {
+            @extend %my-container;
+            margin-bottom: 30px;
+
+            h1 {
+                @include roboto($primary-header-weight, white);
+                text-align: center;
+                font-size: 45px;
+                margin-bottom: 80px;
+            }
+
+            .actual-programs {
+                @include goFlex(row, space-evenly);
+                @extend %my-container;
+                max-width: 1200px;
+
+                .div-pass {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 350px;
+                    margin-bottom: 50px;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 270px;
+                        background-color: rgb(36, 100, 130);
+                        border-radius: 10px;
+                        padding: 20px;
+
+                        i {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 250px;
+                            border-radius: 10px;
+                            font-size: 200px;
+                            transition: transform 0.2s ease-in-out;
+                            color: white;
+                            margin-bottom: 5px;
+                        }
+    
+                        h2 {
+                            @include roboto(500, white);
+                            text-align: center;
+                            margin-bottom: 10px;
+                            margin-top: 5px;
+                            
+                        }
+    
+                        p {
+                            text-align: center;
+                            width: 250px;
+                            color: white;
+                            margin-bottom: 20px;
+                        }
+    
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 5px;
+                            background-color: rgb(51, 51, 255);
+                            color: white;
+                            width: 150px;
+                            height: 45px;
+                            font-size: 18px;
+                            transition: transform 0.2s ease-in-out;
+                        }
+
+ 
+                        a:hover {
+                            transform: scale(1.05);
+                            transform-origin: 50% 50%;
+                        }
+                    }
+
+                    
+                }
+            }
+
+
+        }
+    }
+
+    .programs-questions {
+        margin-bottom: 70px;
+
+        .programs-questions-container {
+            @include goFlex(row, space-evenly);
+            @extend %my-container;
+            background-color: rgb(30, 90, 117);
+            border-radius: 10px;
+            padding: 30px;
+
+            .programs-questions-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                @media (max-width: 690px) {
+                    text-align: center;
+                    width: 100%;
+                }
+
+                h1 {
+                    @include roboto($primary-header-weight, white);
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                    
+                }
+
+                h2 {
+                    @include roboto(500, white);
+                    font-size: 20px;
+                    margin-bottom: 35px
+                }
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include roboto(400, white);
+                    font-size: 30px;
+                    margin-right: 20px;
+                    background-color: #214e66;
+                    height: 50px;
+                    width: 400px;
+                    border-radius: 10px;
+                    margin-left: 40px;
+                    transition: transform 0.5s ease-in-out;
+
+                    
+                    @media (max-width: 690px) {
+                        width: 100%;
+                        margin-right: 0px;
+                        margin-left: 0px;
+                    }
+
+                    
+                    @media (max-width: 425px) {
+                        height: 70px;
+                    }
+                }
+
+                a:hover {
+                    background-color: #1e4459;
+                }
+                
+                
+            }
+
+            .programs-questions-image {
+                width: 300px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    font-size: 180px
+                }
+
+                @media (max-width: 960px) {
+                    display: none;
+                }
+            }
+            
+        }
+
+    }
+
+    .programs-footer {
+        background-color: rgb(26, 78, 103);
+
+        .programs-footer-container {
+            padding: 20px;
+            @extend %my-container;
+
+            .programs-footer-box {
+                @include goFlex(row, space-evenly);
+                align-items: start;
+
+                @media (max-width: 400px) {
+                    flex-direction: column;
+                    
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    h1 {
+                        margin-top: 20px;
+                        @include roboto(700, white);
+                        font-size: 20px;
+                        margin-bottom: 10px
+                    }
+
+                    a {
+                        @include roboto(400, white);
+                        margin-bottom: 5px;
+                        
+                    }
+
+                }
+            }
+
+            .programs-footer-social-media {
+                a {
+                    font-size: 30px;
+                    margin-right: 20px;
+                    color: white;
+                }
+            }
+        }
+
+
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

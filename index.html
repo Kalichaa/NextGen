@@ -17,23 +17,25 @@
                 </a>
                 <nav>
                     <ul>
-                        <a href=""> პროგრამები</a>
-                        <a href="">მენტორები</a>
-                        <a href="">ბლოგი</a>
-                        <a href="">კონტაქტი</a>
+                        <a href="programs.html"> პროგრამები</a>
+                        <a href="mentors.html">მენტორები</a>
+                        <a href="contact.html">კონტაქტი</a>
                     </ul>
                 </nav>
             </div>
             <div class="index-header-rightside">
-                <h1> example@gmail.com </h1>
-                <div class="header-portal">
-                    <div class="header-log-in">
-                        <a href=""> შესვლა </a>
+                <nav class="index-header-rightside-nav">
+                    <h1> example@gmail.com </h1>
+                    <div class="header-portal">
+                        <div class="header-log-in">
+                            <a href="login.html"> შესვლა </a>
+                        </div>
+                        <div class="header-register">
+                            <a href="signup.html"> რეგისტრაცია </a>
+                        </div>
                     </div>
-                    <div class="header-register">
-                        <a href=""> რეგისტრაცია </a>
-                    </div>
-                </div>
+                </nav>
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </header>
@@ -53,131 +55,172 @@
             <h1> პროგრამები</h1>
             <div class="index-programs-programcontainer">
                 <div>
-                    <h2> დიზაინი </h2>
-                    <a href=""> <img src="Images/Main Page/programs-design.jpg" alt=""></a>
+                    <i class="fa-brands fa-html5"></i>
                 </div>
                 <div>
-                    <h2> პროგრამირება </h2>
-                    <a href=""> <img src="Images/Main Page/programs-programming.jpg" alt=""> </a>
+                    <i class="fa-brands fa-python"></i>
 
                 </div>
                 <div>
-                    <h2> ვიდეო მონტაჟი </h2>
-                    <a href=""> <img src="Images/Main Page/programs-videoediting.jpg" alt=""> </a>
+                    <i class="fa-brands fa-angular"></i>
 
                 </div>
+                <div>
+                    <i class="fa-brands fa-java"></i>
+
+                </div>
+                <div>
+                    <i class="fa-brands fa-react"></i>
+
+                </div>
+            </div>
+            <div class="index-programs-seemore">
+                <a href="programs.html"> ვრცლად <i class="fa-solid fa-square-up-right"></i> </a>
             </div>
         </div>
     </section>
 
-    <section class="index-questions">
-        <div class="index-questions-container">
-            <div class="index-questions-text">
-                <h1> კითხვების შემთხვევაში დავგიკავშირდით </h1>
-                <h2> ჩვენი გუნდი თქვენს ნებისმიერ კითხვას გასცემს პასუხს </h2>
-                <a href=""> ჩაეწერე კონსულტაციაზე </a>
-            </div>
-
-            <div class="index-questions-image">
-                <img src="Images/Main Page/quesitonmark.png" alt="">
-            </div>
-        </div>
-    </section>
+    <hr style="color: rgb(97, 97, 97); background-color: rgb(101, 101, 101); border: none; height: 1px;">
 
     <section class="index-mentors">
         <div class="index-mentors-container">
             <h1> ჩვენი მენტორები</h1>
-            <div class="index-mentor-mentorcontainer">
-                <div>
-                    <img src="Images/Main Page/mentor-1-cut.png" alt="">
-                </div>
-                <div>
-                    <img src="Images/Main Page/mentor-2-cut.png" alt="">
-                </div>
-                <div>
-                    <img src="Images/Main Page/mentor-3-cut.png" alt="">
-                </div>
-            </div>
 
             <div class="index-mentor-mentorinfo">
-                <div>
-                    <h3> გიორგი ბარამიძე</h3>
-                    <p>
-                        გიორგი მუშაობს Back End დეველოპერად, ილიას სახელმწიფო უნივერსიტეტში, ასევე ფრილანსერად
-                        ადგილობრივ და უცხოურ პროექტებზე.</p>
+                <div class="index-mentors-balancer">
+                    <img src="Images/mentors/mentor-1-cut.png" alt="">
+                    <div class="index-mentors-text">
+                        <h3> გიორგი ბარამიძე</h3>
+                        <p>
+                            გიორგი მუშაობს Front End დეველოპერად, ილიას სახელმწიფო უნივერსიტეტში, ასევე ფრილანსერად
+                            ადგილობრივ და უცხოურ პროექტებზე.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3> ანა ჯოლია </h3>
-                    <p> ანა ჯეოლაბში გრაფიკული დიზაინის კურსის ლექტორია.
-                        ასევე მუშაობდა სხვადასხვა პროექტზე ქართულ და საერთაშორისო ორგანიზაციებთან ერთად.</p>
+                <div class="index-mentors-balancer">
+                    <img src="Images/mentors/mentor-2-cut.png" alt="">
+                    <div class="index-mentors-text">
+                        <h3> ანა ჯოლია </h3>
+                        <p> ანა NextGen-ში Back End დეველოპმენტის ლექტორია.
+                            ასევე მუშაობდა სხვადასხვა პროექტზე ქართულ და საერთაშორისო ორგანიზაციებთან ერთად.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3> ცოტნე კიკნაძე </h3>
-                    <p> ცოტნეს პოზიცია მოიცავს ახალი მახასითებლების დანერგვას ვებგვერდზე, იმისათვის რომ
-                        მომხმარებლისთვის მაქსიმალურად მარტივი და სასურველი იყოს ვებ-გვერდზე ნავიგაცია.</p>
+                <div class="index-mentors-balancer">
+                    <img src="Images/mentors/mentor-3-cut.png" alt="">
+                    <div class="index-mentors-text">
+                        <h3> ცოტნე კიკნაძე </h3>
+                        <p> ცოტნეს პოზიცია მოიცავს ახალი მახასითებლების დანერგვას ვებგვერდზე, იმისათვის რომ
+                            მომხმარებლისთვის მაქსიმალურად მარტივი და სასურველი იყოს ვებ-გვერდზე ნავიგაცია.</p>
+                    </div>
                 </div>
 
             </div>
 
 
             <div class="index-mentor-more">
-                <a href="">
-                    <div class="index-mentor-more-button">
-                        <a href=""> ვრცლად </a>
-                        <a href=""> <i class="fa-solid fa-square-up-right"></i> </a>
-                    </div>
-                </a>
+                <a href="mentors.html"> ვრცლად <i class="fa-solid fa-square-up-right"></i> </a>
             </div>
         </div>
     </section>
 
     <section class="index-whynextgen">
-        <div>
-            <h1></h1>
-        </div>
-        <div>
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <div class="index-whynextgen-container">
+            <h1> რატომ NextGen-ი? </h1>
+            <div class="index-whynextgen-desc">
+                <h2> NextGen-ი მომხმარებელს სთავაზობს პრაქტიკაზე დაფუძნებულ, სრულფასოვან, საერთაშორისო დონის პროფესიულ
+                    განათლებას ინფორმაციული ტექნოლოგიების დარგში. თქვენზე მორგებულ გრაფიკსა და გამოცდილ მენტორებს. </h2>
             </div>
-            <div>
+            <hr style="color: rgb(79, 79, 79); background-color: rgb(79, 79, 79); border: none; height: 1px;">
+            <div class=" index-whynextgen-stats">
+                <div class="left-side">
+                    <div class="index-whynextgen-stats-maindiv">
+                        <h3> 5000+ კურსდამთავრებული </h3>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="index-whynextgen-stats-maindiv">
+                        <h3> 1000+ აქტიური მოსწავლე </h3>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="index-whynextgen-stats-maindiv">
+                        <h3> შენზე მოწყობილი გრაფიკი </h3>
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div class="index-whynextgen-stats-maindiv">
+                        <h3> წარმატების სტიპენდიები </h3>
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <img src="Images/why-us.png" alt="">
+                </div>
+            </div>
 
-            </div>
         </div>
     </section>
+
 
     <section class="index-partners">
-        <h1></h1>
+        <h1> ჩვენი პარტნიორები </h1>
     </section>
 
-    <footer>
-        <div>
-            <div>
-                <h1></h1>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-            </div>
-            <div>
-                <h1></h1>
-                <a href=""></a>
-                <a href=""></a>
-            </div>
-            <div>
-                <h1></h1>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
 
+    <section class="index-logo">
+        <div class="logo-slide">
+            <img src="Images/partners/meta.png" alt="">
+            <img src="Images/partners/cola.png" alt="">
+            <img src="Images/partners/tesla.webp" alt="">
+            <img src="Images/partners/samsung.png" alt="">
+            <img src="Images/partners/nike.png" alt="">
+            <img src="Images/partners/amazon.png" alt="">
+            <img src="Images/partners/mercedes.png" alt="">
+            <img src="Images/partners/microsoft.png" alt="">
+        </div>
+        <div class="logo-slide">
+            <img src="Images/partners/meta.png" alt="">
+            <img src="Images/partners/cola.png" alt="">
+            <img src="Images/partners/tesla.webp" alt="">
+            <img src="Images/partners/samsung.png" alt="">
+            <img src="Images/partners/nike.png" alt="">
+            <img src="Images/partners/amazon.png" alt="">
+            <img src="Images/partners/mercedes.png" alt="">
+            <img src="Images/partners/microsoft.png" alt="">
+        </div>
+    </section>
+
+
+    <footer class="index-footer">
+        <div class="index-footer-container">
+            <div class="index-footer-box">
+                <div>
+                    <h1> კურსები</h1>
+                    <a href=""> დიზაინი </a>
+                    <a href=""> პროგრამირება </a>
+                    <a href=""> ვიდეო მონტაჟი</a>
+                </div>
+                <div>
+                    <h1> NextGen-ის შესახებ </h1>
+                    <a href=""> კონტაქტი </a>
+                    <a href=""> ბლოგი </a>
+                </div>
+                <div>
+                    <h1> საკონტაქტო ინფორმაცია </h1>
+                    <a href=""> მისამართი </a>
+                    <a href=""> +995 123 123 123</a>
+                    <a href=""> NextGen@gmail.com</a>
+                    <a href=""> 10:00 - 19:00</a>
+                </div>
+            </div>
+            <hr style="color: rgb(79, 79, 79); background-color: rgb(79, 79, 79); border: none; height: 1px;">
+            <div class="index-footer-social-media">
+                <a href=""> <i class="fa-brands fa-youtube"></i> </a>
+                <a href=""> <i class="fa-brands fa-facebook"></i> </a>
+                <a href=""> <i class="fa-brands fa-instagram"></i> </a>
+                <a href=""> <i class="fa-brands fa-linkedin-in"></i> </a>
             </div>
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/b3fc0acd33.js" crossorigin="anonymous"></script>
+    <script src=" https://kit.fontawesome.com/b3fc0acd33.js" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

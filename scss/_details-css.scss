@@ -1,0 +1,185 @@
+.css-main {
+    .css-main-container {
+        margin-top: 120px;
+        @extend %my-container;
+        max-width: 1350px;  
+        @include goFlex(row, space-between);
+
+        .left-side {
+            width: 900px;
+            // background-color: red;
+            padding: 0px 50px 50px 50px;
+            
+            .left-side-intro {
+
+                h1 {
+                    text-align: center;
+                    @include roboto(600, white);
+                    margin-bottom: 30px;
+                    font-size: 50px;
+                    
+                }
+
+                h2 {
+                    @include roboto(500, white);
+                    margin-bottom: 30px;
+                    font-size: 20px; 
+                    line-height: 25px;
+                }
+
+                .left-side-mentor {
+                    @include goFlex(row, space-between);
+                    width: 500px;
+                    margin-top: 30px;
+                    align-items: center;
+                    margin-bottom: 30px;
+                    
+                    img {
+                        width: 200px;
+                    }
+
+                    .text {
+                        
+                        h3 {
+                            @include roboto(800, white);
+                            margin-bottom: 10px;
+                            font-size: 30px;
+                        }
+
+                        p {
+                            @include roboto(500, white);
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+
+
+            }
+
+            .left-side-learn {
+                h1 {
+                    @include roboto(800, white);
+                    margin-bottom: 30px;
+                    margin-top: 30px;
+                    font-size: 30px;
+                    text-align: center
+                }
+
+                h2 {
+                    @include roboto(500, white);
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    @include roboto(400, rgb(212, 212, 212));
+                    font-size: 18px;
+                    margin-left: 30px;
+                    margin-bottom: 5px;
+                } 
+            }
+
+            .left-side-roadmap {
+                h1 {
+                    @include roboto(800, white);
+                    margin-bottom: 50px;
+                    margin-top: 30px;
+                    font-size: 30px;
+                    text-align: center
+                }
+
+                h2 {
+                    @include roboto(500, white);
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                }
+
+                p {
+                    @include roboto(400, rgb(212, 212, 212));
+                    font-size: 18px;
+                    margin-left: 30px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .right-side {
+            width: 400px;
+            @include goFlex(column);
+
+
+            div {
+                position: sticky;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                background-color: rgb(36, 100, 130);
+                border-radius: 10px;
+                padding: 20px;
+
+
+
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 250px;
+                    border-radius: 10px;
+                    font-size: 250px;
+                    transition: transform 0.2s ease-in-out;
+                    color: white;
+                    margin-bottom: 20px;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    color: rgb(235, 235, 235);
+                    margin-bottom: 15px;
+
+                    i {
+                        font-size: 20px;
+                        display: inline
+                    }
+                }
+
+                h2 {
+                    @include roboto(500, white);
+                    text-align: center;
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                    
+                }
+
+                p {
+                    text-align: center;
+                    width: 250px;
+                    color: white;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    background-color: rgb(51, 51, 255);
+                    color: white;
+                    width: 150px;
+                    height: 45px;
+                    font-size: 18px;
+                    transition: transform 0.2s ease-in-out;
+                }
+
+
+                a:hover {
+                    transform: scale(1.05);
+                    transform-origin: 50% 50%;
+                }
+            }
+
+        }
+    }
+}
