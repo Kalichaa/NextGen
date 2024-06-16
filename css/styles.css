@@ -1136,7 +1136,7 @@ html {
   width: 400px;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 .mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div img {
   display: flex;
@@ -1147,8 +1147,7 @@ html {
   font-size: 200px;
   transition: transform 0.2s ease-in-out;
   color: white;
-  margin-bottom: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .mentors-mentors .mentors-listofprograms-container .actual-mentors .div-pass div .text-div {
   background-color: rgb(14, 85, 139);
