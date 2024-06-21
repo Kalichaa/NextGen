@@ -1,0 +1,54 @@
+body {
+    .contact-contact {
+        margin-top: 50px;
+        margin-bottom:70px;
+
+        .contact-contact-container {
+            @extend %my-container;
+            @include goFlex(row, space-between);
+            align-items: center;
+
+            .left-side {
+                @include goFlex(column);
+
+                h1, h2 {
+                    @include roboto($primary-header-weight);
+                    color: white;
+                    font-size: 60px;
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 60px
+                }
+
+                p {
+                    @include roboto(400, white);
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                }
+
+                h3 {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                    margin-top: 40px;
+                }
+
+                a {
+                    font-size: 40px;
+                    margin-right: 10px;
+                    color: #ffffff;
+                }
+            }
+
+            .right-side {
+                width: 700px;
+                height: 500px;
+            }
+        }
+    }
+}

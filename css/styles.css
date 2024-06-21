@@ -61,7 +61,7 @@ a {
   box-sizing: border-box;
 }
 
-.mentors-contact .mentors-contact-container, .mentors-mentors .mentors-listofprograms-container .actual-mentors, .mentors-mentors .mentors-listofprograms-container, .css-main .css-main-container, body .programs-footer .programs-footer-container, body .programs-questions .programs-questions-container, body .programs-listofprograms .programs-listofprograms-container .actual-programs, body .programs-listofprograms .programs-listofprograms-container, body .programs-intro .programs-intro-bg .programs-intro-container, body .index-footer .index-footer-container, body .index-whynextgen .index-whynextgen-container, body .index-mentors .index-mentors-container, body .index-programs .index-programs-container, body .index-header .index-header-container {
+body .contact-contact .contact-contact-container, .mentors-contact .mentors-contact-container, .mentors-mentors .mentors-listofprograms-container .actual-mentors, .mentors-mentors .mentors-listofprograms-container, .css-main .css-main-container, body .programs-footer .programs-footer-container, body .programs-questions .programs-questions-container, body .programs-listofprograms .programs-listofprograms-container .actual-programs, body .programs-listofprograms .programs-listofprograms-container, body .programs-intro .programs-intro-bg .programs-intro-container, body .index-footer .index-footer-container, body .index-whynextgen .index-whynextgen-container, body .index-mentors .index-mentors-container, body .index-programs .index-programs-container, body .index-header .index-header-container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -151,14 +151,13 @@ body .index-header .index-header-container .index-header-rightside i {
 body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: start;
   flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
   color: white;
   align-items: center;
-  width: 450px;
 }
 @media (max-width: 1100px) {
   body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav {
@@ -168,13 +167,7 @@ body .index-header .index-header-container .index-header-rightside .index-header
 body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav h1 {
   font-size: 15px;
   color: white;
-}
-body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-portal {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 250px;
+  margin-right: 20px;
 }
 body .index-header .index-header-container .index-header-rightside .index-header-rightside-nav .header-log-in {
   width: 85px;
@@ -1245,4 +1238,173 @@ html {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+body .contact-contact {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+body .contact-contact .contact-contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body .contact-contact .contact-contact-container .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+body .contact-contact .contact-contact-container .left-side h1, body .contact-contact .contact-contact-container .left-side h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: black;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+body .contact-contact .contact-contact-container .left-side h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+body .contact-contact .contact-contact-container .left-side p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+body .contact-contact .contact-contact-container .left-side h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+body .contact-contact .contact-contact-container .left-side a {
+  font-size: 40px;
+  margin-right: 10px;
+  color: #ffffff;
+}
+body .contact-contact .contact-contact-container .right-side {
+  width: 700px;
+  height: 500px;
+}
+
+body .login-main {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  margin-bottom: 0px;
+}
+body .login-main body {
+  background: rgb(36, 100, 130);
+  overflow: hidden;
+}
+body .login-main ::-moz-selection {
+  background: rgb(36, 100, 130);
+}
+body .login-main ::selection {
+  background: rgb(36, 100, 130);
+}
+body .login-main .container {
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+body .login-main .wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgb(36, 100, 130);
+}
+body .login-main .wrapper .title {
+  height: 90px;
+  background: rgb(36, 100, 130);
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .login-main .wrapper form {
+  padding: 30px 25px 25px 25px;
+}
+body .login-main .wrapper form .row {
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+body .login-main .wrapper form .row input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid rgb(36, 100, 130);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+body .login-main form .row input:focus {
+  border-color: rgb(36, 100, 130);
+  box-shadow: inset 0px 0px 2px 2px rgb(36, 100, 130);
+}
+body .login-main form .row input::-moz-placeholder {
+  color: rgb(36, 100, 130);
+}
+body .login-main form .row input::placeholder {
+  color: rgb(36, 100, 130);
+}
+body .login-main .wrapper form .row i {
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: rgb(36, 100, 130);
+  border: 1px solid rgb(36, 100, 130);
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .login-main .wrapper form .pass {
+  margin: -8px 0 20px 0;
+}
+body .login-main .wrapper form .pass a {
+  color: rgb(36, 100, 130);
+  font-size: 17px;
+  text-decoration: none;
+}
+body .login-main .wrapper form .pass a:hover {
+  text-decoration: underline;
+}
+body .login-main .wrapper form .button input {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: rgb(36, 100, 130);
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+body .login-main form .button input:hover {
+  background: rgb(26, 119, 163);
+}
+body .login-main .wrapper form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+body .login-main .wrapper form .signup-link a {
+  color: rgb(36, 100, 130);
+  text-decoration: none;
+}
+body .login-main form .signup-link a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
